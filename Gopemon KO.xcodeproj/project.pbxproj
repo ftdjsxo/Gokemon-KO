@@ -14,6 +14,10 @@
 		0D5D83001D478EE800891329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D82FE1D478EE800891329 /* LaunchScreen.storyboard */; };
 		0D5D830B1D478EE900891329 /* Gopemon_KOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D830A1D478EE900891329 /* Gopemon_KOTests.swift */; };
 		0D5D83161D478EE900891329 /* Gopemon_KOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D83151D478EE900891329 /* Gopemon_KOUITests.swift */; };
+		0D5D83241D47901100891329 /* NetworkJSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D83231D47901100891329 /* NetworkJSONUtils.swift */; };
+		0D5D83271D4790A900891329 /* SimpleNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D83261D4790A900891329 /* SimpleNetworkOperation.swift */; };
+		0D5D832A1D47AC0400891329 /* PokemonBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D83291D47AC0400891329 /* PokemonBean.swift */; };
+		0D5D832C1D47AF6D00891329 /* GDCUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D832B1D47AF6D00891329 /* GDCUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		0D5D83111D478EE900891329 /* Gopemon KOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gopemon KOUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D83151D478EE900891329 /* Gopemon_KOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gopemon_KOUITests.swift; sourceTree = "<group>"; };
 		0D5D83171D478EE900891329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D5D83231D47901100891329 /* NetworkJSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkJSONUtils.swift; sourceTree = "<group>"; };
+		0D5D83261D4790A900891329 /* SimpleNetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkOperation.swift; sourceTree = "<group>"; };
+		0D5D83291D47AC0400891329 /* PokemonBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonBean.swift; sourceTree = "<group>"; };
+		0D5D832B1D47AF6D00891329 /* GDCUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,9 @@
 		0D5D82F41D478EE800891329 /* Gopemon KO */ = {
 			isa = PBXGroup;
 			children = (
+				0D5D832B1D47AF6D00891329 /* GDCUtils.swift */,
+				0D5D83281D47ABF400891329 /* Model */,
+				0D5D83251D47903B00891329 /* Network */,
 				0D5D82F51D478EE800891329 /* AppDelegate.swift */,
 				0D5D82F71D478EE800891329 /* ViewController.swift */,
 				0D5D82F91D478EE800891329 /* Main.storyboard */,
@@ -123,6 +134,23 @@
 				0D5D83171D478EE900891329 /* Info.plist */,
 			);
 			path = "Gopemon KOUITests";
+			sourceTree = "<group>";
+		};
+		0D5D83251D47903B00891329 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0D5D83261D4790A900891329 /* SimpleNetworkOperation.swift */,
+				0D5D83231D47901100891329 /* NetworkJSONUtils.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		0D5D83281D47ABF400891329 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D5D83291D47AC0400891329 /* PokemonBean.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +221,11 @@
 				TargetAttributes = {
 					0D5D82F11D478EE800891329 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0D5D83051D478EE800891329 = {
 						CreatedOnToolsVersion = 7.3;
@@ -256,6 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5D832C1D47AF6D00891329 /* GDCUtils.swift in Sources */,
+				0D5D832A1D47AC0400891329 /* PokemonBean.swift in Sources */,
+				0D5D83271D4790A900891329 /* SimpleNetworkOperation.swift in Sources */,
+				0D5D83241D47901100891329 /* NetworkJSONUtils.swift in Sources */,
 				0D5D82F81D478EE800891329 /* ViewController.swift in Sources */,
 				0D5D82F61D478EE800891329 /* AppDelegate.swift in Sources */,
 			);
@@ -402,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Gopemon KO/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.coocked.Gopemon-KO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Gopemon KO/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.coocked.Gopemon-KO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +523,7 @@
 				0D5D831C1D478EE900891329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D5D831D1D478EE900891329 /* Build configuration list for PBXNativeTarget "Gopemon KOTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +532,7 @@
 				0D5D831F1D478EE900891329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D5D83201D478EE900891329 /* Build configuration list for PBXNativeTarget "Gopemon KOUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +541,7 @@
 				0D5D83221D478EE900891329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
